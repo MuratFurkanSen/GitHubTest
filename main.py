@@ -1,12 +1,14 @@
+from dotenv import load_dotenv
 import os
 
-# Debug: Print all environment variables (for testing only!)
-print("All environment variables:", os.environ)
+# Load the environment variables from .env file
+load_dotenv()
 
-# Try to get the secret again
+# Now you can access the DB_PASSWORD secret
 db_password = os.getenv("DB_PASSWORD")
 
 if db_password:
-    print("✅ Database password loaded securely!")
+    print("Database password loaded securely!")
 else:
-    print("❌ Error: DB_PASSWORD is missing!")
+    print("Error: DB_PASSWORD is missing!")
+print(db_password)
