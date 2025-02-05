@@ -17,4 +17,4 @@ jobs:
       - name: Run Python Script with Secret
         env:
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}  # Inject secret
-        run: python app.py
+        run: python main.py
